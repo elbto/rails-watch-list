@@ -1,8 +1,20 @@
-<h1>Lists</h1>
+<section class="hero mb-5">
+  <div class="hero-title-block">
+    <h1 class="hero-title container">Welcome to MyList</h1>
+  </div>
+  <div class="add-list">
+    <%= link_to "Add a list", new_list_path %>
+  </div>
+</section>
 
-<ul>
- <% @lists.each do |list| %>
-   <li><%= list.name %></li>
-    <span><%= link_to "see more", list_path(list) %></span>
-  <% end %>
-</ul>
+<section class="section-lists container mb-5">
+  <h2 class="mb-5 text-center pb-3 border-bottom">My lists</h2>
+  <div class="d-flex justify-content-evenly">
+    <% @lists.each do |list| %>
+    <div class="card w-20 mx-4 p-4">
+      <h3><%= list.name %></h3>
+      <span class="text-center"><%= link_to "see more", list_path(list), class: "text-decoration-none text-secondary"%></span>
+    </div>
+    <% end %>
+  </div>
+</section>

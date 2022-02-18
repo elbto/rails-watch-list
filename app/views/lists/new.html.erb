@@ -1,8 +1,12 @@
-<h2 class="text-center my-4">New list</h2>
 
-<div class="container">
-  <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.button :submit, class: "btn btn-primary rounded w-100" %>
-  <% end %>
-</div>
+
+<section class="mt-4">
+  <h2 class="text-center my-4">New list</h2>
+
+  <div class="container">
+    <%= simple_form_for @list do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit, class: "btn btn-primary rounded w-100" %>
+    <% end %>
+  </div>
+</section>
